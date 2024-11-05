@@ -9,7 +9,7 @@ Onibus::Onibus(string placa_input, int capacidade_input){
 
 
 bool Onibus::subir_passageiros(int passageiros){
-    if(this->lotacao_atual + passageiros < this->capacidade_maxima){
+    if(this->lotacao_atual + passageiros <= this->capacidade_maxima){
         this->lotacao_atual+=passageiros;
         return true;
     }
@@ -29,9 +29,8 @@ bool Onibus::descer_passageiros(int passageiros){
 
 bool Onibus::transfere_passageiros(Onibus* outro, int passageiros){
     if(
-        (this->lotacao_atual - passageiros >= 0) 
-    & 
-        (outro->lotacao_atual + passageiros < outro->capacidade_maxima)
+        (this->lotacao_atual - passageiros >= 0) && 
+        (outro->lotacao_atual + passageiros <= outro->capacidade_maxima)
     ){
         this->lotacao_atual-=passageiros;
         outro->lotacao_atual+=passageiros;

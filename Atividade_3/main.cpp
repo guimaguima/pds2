@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-    char entrada;
+    char entrada='G';
     
     string placa;
     string placa_tranferencia;
@@ -20,11 +20,11 @@ int main()
     Onibus* onibus_temp;
     Onibus* onibus_temp2;
 
-    cin >> entrada;
     while(entrada!='F'){
         cin >> entrada;
         switch (entrada)
         {
+
         case 'C':
             cin >> placa >> numerador;
             if(empresa.adicionar_onibus(placa,numerador) != nullptr)

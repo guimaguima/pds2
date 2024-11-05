@@ -13,7 +13,7 @@ main.o: Onibus.hpp Empresa.hpp main.cpp
 	${CC} ${CFLAGS} -c main.cpp
 
 main: main.o empresa.o onibus.o
-    ${CC} ${CFLAGS} main.o empresa.o onibus.o -o main
+	${CC} ${CFLAGS} main.o Empresa.o Onibus.o -o main
 
 clean:
-rm -rf  main *.o 
+	rm -rf  main *.o 
