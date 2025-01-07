@@ -33,5 +33,6 @@
 *.app
 
 /.cph
+*/.cph
 
 /.vscode
